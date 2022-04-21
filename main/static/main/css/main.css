@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+.menu{
+    margin: 0;
+    padding: 0;
+    background: #877346;
+    width: 100%;
+    height: 12vh;
+    border-bottom: 5px solid #59421f;
+}
+
+.menu ul{
+    float:right;
+    list-style: none;
+    display: inline;
+}
+
+ul img{
+    width: 25px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.menu a{
+    display: block;
+    float: left;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+    text-decoration-color: #59421f;
+}
+
+#logo_img{
+    width: 80px;
+    margin-left: 15px;
+    margin-top: 10px;
+    float: left;
+}
+
+.logo{
+    color: black;
+    font-size: 45px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: +12px;
+    font-family: 'Updock', cursive;
+}
+
+main{
+    background: url("https://media.proglib.io/wp-uploads/2019/02/books-lit@2x-e1550903308223.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+main{
+    background-attachment: fixed;
+}
+
+
+main form{
+    display: flex;
+    padding-left: 28%;
+    padding-top: 15%;
+}
+
+main form input{
+    width: 600px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+main form button{
+    background: none;
+    position: absolute;
+    margin-left: 550px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}

@@ -1,0 +1,14 @@
+{% extends 'main/sample.html' %}
+{% load static %}
+
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+    <form>
+        <input type="text" name="search" placeholder="Искать здесь...">
+        <button type="submit"> <img src="{% static 'main/img/magnifying-glass-solid.svg' %}" alt=""> </button>
+    </form>
+{% endblock %}
