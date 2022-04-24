@@ -5,5 +5,15 @@
 {% endblock %}
 
 {% block content %}
-
+    <div class = "books">
+        <ul>
+            {% for book in posts %}
+                <li>
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.content }}</p>
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

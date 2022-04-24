@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 
 def main_page(request):
@@ -6,4 +7,5 @@ def main_page(request):
 
 
 def catalog(request):
-    return render(request, 'main/catalog.html')
+    posts = Book.objects.all()
+    return render(request, 'main/catalog.html', {'posts': posts})
