@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
-    <div class="menu">
-        <img id="logo_img" src="{% static 'main/img/book-open-solid.svg' %}" alt="">
-        <span class="logo">Library</span>
-        <ul>
-            <a href="{% url 'home' %}"><li><img src="{% static 'main/img/house-solid.svg' %}" alt="">Главная</li></a>
-            <a href={% url 'catalog' %}><li><img src="{% static 'main/img/book-solid.svg' %}" alt="">Каталог</li></a>
-            <a href=""><li><img src="{% static 'main/img/user-solid.svg' %}" alt="">Личный кабинет</li></a>
-        </ul>
-    </div>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
-    <footer>
-        <h2>О нас</h2>
-        <h4>Группа 4311</h4>
-        <p>Богатов Владислав</p>
-        <p>Гарифуллин Руслан</p>
-    </footer>
+<div class="menu">
+    <img id="logo_img" src="{% static 'main/img/book-open-solid.svg' %}" alt="">
+    <span class="logo">Library</span>
+    <ul>
+        <a href="{% url 'home' %}"><li><img src="{% static 'main/img/house-solid.svg' %}" alt="">Главная</li></a>
+        <a href={% url 'catalog' %}><li><img src="{% static 'main/img/book-solid.svg' %}" alt="">Каталог</li></a>
+        <a href=""><li><img src="{% static 'main/img/user-solid.svg' %}" alt="">Личный кабинет</li></a>
+    </ul>
+</div>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    <h2>О нас</h2>
+    <h4>Группа 4311</h4>
+    <p>Богатов Владислав</p>
+    <p>Гарифуллин Руслан</p>
+</footer>
 </body>
 </html>

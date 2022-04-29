@@ -1,0 +1,14 @@
+{% extends 'main/sample.html' %}
+{% load static %}
+
+{% block title %}
+    Страница не найдена
+{% endblock %}
+
+{% block content %}
+
+    <div class="bug">
+        <h1>Не найдено</h1>
+        <img src="{% static 'main/img/bug-solid.svg' %}" alt="">
+    </div>
+{% endblock %}

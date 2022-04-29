@@ -61,13 +61,16 @@ ul img{
 
 main{
     background: url("https://media.proglib.io/wp-uploads/2019/02/books-lit@2x-e1550903308223.jpg");
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 450vh;
+    padding-bottom: 30vh;
     background-size: cover;
 }
 
 main{
     background-attachment: fixed;
     padding-top: 12vh;
+    box-sizing: border-box;
 }
 
 main form{
@@ -95,11 +98,15 @@ main form button{
 }
 
 footer{
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    margin-top: -25vh;
     background: #877346;
-    padding-left: 3vh;
+    padding-left: 4vh;
     padding-top: 2vh;
     padding-bottom: 3vh;
-    font-size: 2vh;
+    font-size: 2.5vh;
     font-family: 'Roboto', sans-serif;
     color: black;
     border-top: 0.8vh solid #59421f;
@@ -109,6 +116,126 @@ footer h2{
     font-weight: 900;
 }
 
-main .books{
-    background:#877346;
+.card{
+    margin: 0 0 0 auto;
+    background: #877346;
+    border: 0.3vh solid #59421f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    font-weight: 900;
+}
+
+.card{
+    margin-top: 5vh;
+    margin-right: 30vh;
+}
+
+.card img{
+    border: 0.2vh solid #59421f;
+}
+
+.button_book {
+    position: absolute;
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 0.2vh solid #000000 !important;
+    border-radius: 4vh !important;
+    font-size: 2vh !important;
+    padding: 0.6vh 4vh !important;
+    transition: all 0.8s ease !important;
+}
+.button_book:hover{
+    text-decoration: none !important;
+    background-color: #59421f !important;
+    color: #000000 !important;
+    border-color: #59421f !important;
+}
+
+.row{
+    height: 33vh;
+}
+
+.row img{
+    width: 25vh;
+    height: 33vh;
+}
+
+.button_book_div{
+    position: relative;
+    height: 2vh;
+    width: 2vh;
+    margin-top: 3vh;
+}
+
+.card-body{
+    padding-top: 0.9vh;
+    padding-left: 0.1vh;
+}
+
+.cat_book{
+    overflow: scroll;
+    float: left;
+    position: absolute;
+    margin-top: 5vh;
+    max-width: 20vw;
+    max-height: 50vh;
+    background: #877346;
+    border: 0.5vh solid #59421f;
+    padding-right: 6vh;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.cat_book ul{
+    list-style: none;
+}
+
+.cat_book a{
+    display: block;
+    padding-top: 2vh;
+}
+
+.active_cat a{
+    color: black;
+    text-decoration: none;
+}
+
+.active_cat a:hover{
+    text-decoration: underline;
+    text-decoration-color: #59421f;
+}
+
+.passiv_cat{
+    color: #59421f;
+}
+
+.button_cont{
+    position: absolute;
+    padding-left: 65vh;
+    padding-top: 27.5vh;
+}
+
+nav{
+    padding-left: 80vh;
+    padding-top: 10vh;
+}
+
+.pagination a{
+    color: white;
+    background: black;
+    border: none;
+}
+
+.pagination li{
+    border-radius: 2vh;
+}
+
+.pagination a:hover{
+    color: black;
+    background: #59421f;
+    transition: all 0.8s ease !important;
 }
