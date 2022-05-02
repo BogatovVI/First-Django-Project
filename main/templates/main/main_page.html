@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-    <form>
-        <input type="text" name="search" placeholder="Искать здесь...">
+    <form action="{% url 'search' %}" method="get">
+        <input type="text" required onfocus="this.value=''" name="search" placeholder="Введите автора или название книги...">
         <button type="submit"> <img src="{% static 'main/img/magnifying-glass-solid.svg' %}" alt=""> </button>
     </form>
 {% endblock %}

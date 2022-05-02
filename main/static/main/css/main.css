@@ -239,3 +239,62 @@ nav{
     background: #59421f;
     transition: all 0.8s ease !important;
 }
+
+.void-str{
+    background: #877346;
+    max-width: 30.6vh;
+    border-radius: 2vh;
+    border: 0.3vh solid #59421f;
+    margin-left: 82vh;
+    margin-top: 12vh;
+    font-family: 'Updock', cursive;
+    font-size: 10vh;
+    font-weight: bold;
+}
+
+.void-str h1{
+    margin-left: 2vh;
+    color: black;
+}
+
+.void-str img{
+    width: 30vh;
+}
+
+.cat-choose{
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: black;
+}
+
+.cat-choose a{
+    background: none;
+    font-size: 3vh;
+}
+
+.cat-choose a:hover{
+    color: black;
+    background: none;
+}
+
+.search-button a{
+    margin-top: 2.5vh;
+    margin-left: 2vh;
+}
+
+.search-result{
+    margin: 0 0 0 auto;
+    max-width: 85vh;
+    background: #877346;
+    font-family: 'Updock', cursive;
+    font-size: 6vh;
+    font-weight: bold;
+    border-radius: 1vh;
+    border: 0.3vh solid #59421f;
+    padding-left: 1vh;
+}
+
+.search-result{
+    margin-top: 1vh;
+    margin-right: 30vh;
+}

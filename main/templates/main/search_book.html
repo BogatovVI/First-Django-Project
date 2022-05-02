@@ -2,38 +2,21 @@
 {% load static %}
 
 {% block title %}
-    Каталог
+    Поиск
 {% endblock %}
 
 {% block content %}
-
-    <aside class="cat_book">
-        <ul>
-            {% if cat_selected == 0 %}
-                <li class="passiv_cat">
-                    <a>Все категории</a>
-                </li>
-            {% else %}
-                <li class="active_cat">
-                    <a href="{% url 'catalog' %}">Все категории</a>
-                </li>
-            {% endif %}
-
-            {% for cats in cat %}
-                {% if cats.pk == cat_selected %}
-                    <li class="passiv_cat">
-                        <a>{{ cats.name }}</a>
-                    </li>
-                {% else %}
-                    <li class="active_cat">
-                    <a href="{{ cats.get_absolute_url }}">{{ cats.name }}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </aside>
-
-    {% if count_book == False %}
+    {% csrf_token %}
+    <div class="search-button">
+                <a href="{% url 'home' %}" class="button_book">Назад</a>
+    </div>
+    {% if book == False %}
+        <div class="void-str">
+            <img src="{% static 'main/img/pngwing.com.png' %}" alt="">
+            <h1>Ничего нету</h1>
+        </div>
+    {% else %}
+        <h1 class="search-result">Результат поиска</h1>
         {% for b in page_obj %}
         <div class="card mb-3" style="max-width: 85vh;">
             <div class="row g-0">
@@ -53,11 +36,6 @@
             </div>
         </div>
         {% endfor %}
-    {% else %}
-        <div class="void-str">
-            <img src="{% static 'main/img/pngwing.com.png' %}" alt="">
-            <h1>Ничего нету</h1>
-        </div>
     {% endif %}
 
     {% if page_obj.has_other_pages %}
@@ -88,5 +66,4 @@
         </nav>
     {% else %}
     {% endif %}
-
 {% endblock %}
