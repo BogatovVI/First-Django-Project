@@ -1,0 +1,21 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    Войти
+{% endblock %}
+
+{% block content %}
+    <div class="button-login-back">
+        <a href="{% url 'home' %}" class="button_book">Назад</a>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="login_user">
+            {{ form.as_p }}
+            <button class="button_for_ever" type="submit">Войти</button>
+            <div class="button-login-register">
+                <a href="{% url 'register' %}" class="button_book">Регистрация</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

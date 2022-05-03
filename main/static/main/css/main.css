@@ -145,6 +145,7 @@ footer h2{
     font-size: 2vh !important;
     padding: 0.6vh 4vh !important;
     transition: all 0.8s ease !important;
+    font-family: 'Roboto', sans-serif;
 }
 .button_book:hover{
     text-decoration: none !important;
@@ -247,13 +248,13 @@ nav{
     border: 0.3vh solid #59421f;
     margin-left: 82vh;
     margin-top: 12vh;
-    font-family: 'Updock', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 10vh;
     font-weight: bold;
 }
 
 .void-str h1{
-    margin-left: 2vh;
+    margin-left: 1.5vh;
     color: black;
 }
 
@@ -278,7 +279,7 @@ nav{
 }
 
 .search-button a{
-    margin-top: 2.5vh;
+    margin-top: 2vh;
     margin-left: 2vh;
 }
 
@@ -286,8 +287,8 @@ nav{
     margin: 0 0 0 auto;
     max-width: 85vh;
     background: #877346;
-    font-family: 'Updock', cursive;
-    font-size: 6vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vh;
     font-weight: bold;
     border-radius: 1vh;
     border: 0.3vh solid #59421f;
@@ -297,4 +298,85 @@ nav{
 .search-result{
     margin-top: 1vh;
     margin-right: 30vh;
+}
+
+.login_user input{
+    float: right;
+    height: 4vh;
+    width: 40vh;
+    box-sizing: border-box;
+}
+
+.login_user{
+    padding-top: 2vh;
+    background: #877346;
+    min-height: 35vh;
+    width: 60vh;
+    border-radius: 2vh;
+    border: 0.3vh solid #59421f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    padding-left: 1vh;
+    margin-left: 14vh;
+    margin-top: -20vh;
+    font-weight: bold;
+}
+
+.button_for_ever{
+    background: black;
+    width: 19.8vh;
+    height: 4.5vh;
+    color: #ffffff !important;
+    border: 0.2vh solid #000000 !important;
+    border-radius: 4vh !important;
+    font-size: 2vh !important;
+    padding: 0.1vh 4vh !important;
+    transition: all 0.8s ease !important;
+}
+
+.button_for_ever:hover{
+    text-decoration: none !important;
+    background-color: #59421f !important;
+    color: #000000 !important;
+    border-color: #59421f !important;
+}
+
+.button-login-register{
+    padding-left: 19vh;
+    padding-top: 9vh;
+}
+
+.button-login-back{
+    margin-top: 2vh;
+    margin-left: 2vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login_user button{
+    margin-left: 19vh;
+    margin-top: 3vh;
+}
+
+.register-user{
+    margin-top: -30vh;
+    padding-left: 1vh;
+    max-width: 85vh;
+    min-height: 70vh;
+    background: #877346;
+    padding-top: 2vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    border-radius: 2vh;
+    border: 0.3vh solid #59421f;
+}
+
+.register-user input{
+    width: 80vh;
+}
+
+.register-user button{
+    margin-top: 1vh;
+    margin-left: 20vh;
+    width: 40vh;
 }

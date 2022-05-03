@@ -1,0 +1,18 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block content %}
+    <div class="button-login-back">
+        <a href="{% url 'login' %}" class="button_book">Назад</a>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="register-user">
+            {{ form.as_p }}
+            <button class="button_for_ever" type="submit">Зарегистрироваться</button>
+        </div>
+    </form>
+{% endblock %}

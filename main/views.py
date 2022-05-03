@@ -1,7 +1,11 @@
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.views import LoginView
 from django.core.paginator import Paginator
 from django.db.models import Q
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
 from .models import *
 
 
@@ -76,3 +80,17 @@ def show_cat(request, cat_id):
         'count_book': count_book
     }
     return render(request, 'main/catalog.html', context=context)
+
+
+class LoginUser(LoginView):
+    form_class = AuthenticationForm
+    template_name = 'main/login.html'
+
+    def get_success_url(self):
+        return reverse_lazy('home')
+
+
+class RegisterUser(CreateView):
+    form_class = UserCreationForm
+    template_name = 'main/register.html'
+    success_url = reverse_lazy('login')

@@ -8,7 +8,7 @@
 {% block content %}
     {% csrf_token %}
     <div class="search-button">
-                <a href="{% url 'home' %}" class="button_book">Назад</a>
+        <a href="{% url 'home' %}" class="button_book">Назад</a>
     </div>
     {% if book == False %}
         <div class="void-str">
