@@ -1,0 +1,38 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    Личный кабинет
+{% endblock %}
+
+{% block content %}
+    <div class="user-button">
+        <a href="{% url 'catalog' %}" class="button_book">Назад</a>
+    </div>
+    <div class="User-block">
+        <div class="photo-user">
+            {% if profile.photo %}
+                <img src="{{ profile.photo.url }}" alt="">
+            {% else %}
+                <h1>Нет фото</h1>
+            {% endif %}
+        </div>
+        <div class="user-name">
+            <h1>Пользователь: {{ user }}</h1>
+        </div>
+        <form method="post">{% csrf_token %}
+            {% if flag == True %}
+                <button class="button_for_ever" name="premium" type="submit">-Подписка</button>
+            {% elif flag == False %}
+                <button class="button_for_ever" name="premium" type="submit">+Подписка</button>
+            {% endif %}
+        </form>
+        <div class="quit-button">
+            <a href="{% url 'logout' %}" class="button_book">Выход</a>
+        </div>
+        {% if staff == True %}
+            <div class="staff-button">
+                <a href="/admin/" class="button_book">Администрация</a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

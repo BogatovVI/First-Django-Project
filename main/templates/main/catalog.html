@@ -34,7 +34,7 @@
     </aside>
 
     {% if count_book == False %}
-        {% for b in page_obj %}
+        {% for b in page_obj|dictsort:'author' %}
         <div class="card mb-3" style="max-width: 85vh;">
             <div class="row g-0">
                 <div class="col-md-4">

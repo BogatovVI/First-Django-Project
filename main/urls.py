@@ -9,5 +9,7 @@ urlpatterns = [
     path('category/<int:cat_id>/', views.show_cat, name="category"),
     path('search/', views.search_book, name="search"),
     path('login/', LoginUser.as_view(), name="login"),
-    path('register/', RegisterUser.as_view(), name="register")
+    path('logout/', views.logout_user, name="logout"),
+    path('register/', RegisterUser.as_view(), name="register"),
+    path('user/', views.show_user, name="user"),
 ]

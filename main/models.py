@@ -41,7 +41,7 @@ class Category(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to="user/%Y/%m/%d/")
+    photo = models.ImageField(upload_to="user/%Y/%m/%d/", verbose_name="Фото", blank=True)
     premium = models.BooleanField(default=False, verbose_name="Подписка")
 
     class Meta:

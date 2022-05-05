@@ -1,10 +1,30 @@
 {% extends 'main/sample.html' %}
 
 {% block title %}
-
+    Книга
 {% endblock %}
 
 {% block content %}
-
-
+    <div class="book-button">
+        <a href="{% url 'catalog' %}" class="button_book">Назад</a>
+    </div>
+    <div class="body-book">
+        <div class="photo-book">
+            <img src="{{ book.photo.url }}" alt="">
+            {% if premium %}
+                <div class="dow-button">
+                    <a href="{{ book.file_book.url }}" download class="button_book">Скачать книгу</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="author">
+            <h1>{{ book.author }}</h1>
+        </div>
+        <div class="title">
+            <h2>{{ book.title }}</h2>
+        </div>
+        <div class="content-book">
+            {{ book.content }}
+        </div>
+    </div>
 {% endblock %}
